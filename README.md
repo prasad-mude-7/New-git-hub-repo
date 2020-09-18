@@ -1,21 +1,23 @@
-ParkingLot
-Design a parking lot using Python with TDD approach
+# Parking Lot -Python Project
+## Project Brief
+#### Design a python project with following features:
+* create parking slots 
+* provide auto parking with slot number
+* returns the vehicle detail based on solt number ,colour 
+* returns the slot number by vehicle registration number
 
-Dependencies
-You just need Python. The code is compatible with Python2 as well as Python3. Visit the link https://www.python.org/downloads/ to install Python.
+## Requirement :
+ As it is a python project so primary requirement is to install Python3 and IDE which you like to write code.
+Command prompt/terminal is used to run the program
 
-Description
-This repository gives an overview of how we can design a basic parking lot in Python. It creates parking lot with given number of slots. The cars follow Greedy approach while being parked in the slots.
+## Description :
+This python project follows following command 
+* create_parking_lot (size)-This creates a parking lot of size provided by user
+* park(vehicle detail)-This command parks vehicle with detail like registration number and colour so that we can access vehicle position(slot) by its registration number and colour 
 
-ParkingLot.py script defines the following functions -
-
-create_parking_lot n - Given n number of slots, create a parking lot
-park car_regno car_color - Parks a vehicle with given registration number and color in the nearest empty slot possible. If there are no more empty slots available, it shows a message "Sorry, parking lot is full".
-status - Prints the slot number, registration number and color of the parked vehicles.
-leave x - Removes vehicle from slot number x
-There are few query functions to retrieve slot number from registration number of car, get registration numbers of cars with particular color etc.
-ParkingLot.py can be run through shell or through file containing test cases. An example file run_test_case.txt has been provided in repo.
-
-I have followed TDD approach while designing this. test_parking_lot.py uses unittest module of python. Here 6 test cases are written in order to test each functionality mentioned in ParkingLot.py
-
-Vehicle.py is a separate class where we can define the type of vehicles that can be parked. As of now, it only contains class Car
+* leave(slot_no) and status-- These two command provides detail of vehicle which left the parking lot and current vehicles in parking lot respectively.
+* registration_numbers_for_cars_with_colour(colour)- It provides registration no of car , for this we have to provide the colour of vehicle as input parameter .If parking lot have many vehicles with same colour then it will return all the registration number of vehicles wtih same colour
+* slot_numbers_for_cars_with_colour(colour) and slot_number_for_registration_number(registration_number) -- These two commands provide slot number i.e. the position of vehicles.
+    
+* code is formulated to take input in two way 1.Interactive and 2.file so 
+for this all command are   provided in git repo in a text file
